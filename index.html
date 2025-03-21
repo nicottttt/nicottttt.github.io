@@ -85,6 +85,13 @@
             color: white;
             margin-top: 40px;
         }
+        .post-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -109,7 +116,7 @@
             <h2>最新文章</h2>
             <ul>
                 <li>
-                     <a href="#post1" onclick="loadPost('access_deepseek.md')">公网远程接入部署在云主机上的deepseek</a>
+                    <a href="#post1" onclick="loadPost('access_deepseek.md')">公网远程接入部署在云主机上的 deepseek</a>
                     <p>文章简介或摘要内容...</p>
                 </li>
                 <li>
@@ -122,13 +129,18 @@
                 </li>
             </ul>
         </section>
+
+        <!-- 添加一个容器来显示 Markdown 内容 -->
+        <div id="post-content" class="post-content"></div>
     </div>
 
     <footer>
         <p>&copy; 2025 Nico. 保留所有权利。</p>
         <p>Powered by GitHub Pages</p>
     </footer>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- 引入 marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     <script>
         // 动态加载 Markdown 文件并渲染
